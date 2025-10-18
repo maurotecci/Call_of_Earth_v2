@@ -1,0 +1,14 @@
+saves/*.txt
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+*.log
+
+.vscode/
+.idea/
+
+.DS_Store
+Thumbs.db
