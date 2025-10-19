@@ -3,6 +3,7 @@ import time
 from random import choice, randint, sample
 from os.path import join
 from json import load, dump
+from support import resource_path, save_path
 
 pygame.init()
 
@@ -15,13 +16,13 @@ DARK_GRAY = (41, 49, 51)
 WHITE = (255, 255, 255)
 GRAY = (104, 104, 104)
 
-score_font = pygame.font.Font(join('font','Pixeltype.ttf'), 40)
-score_font_2 = pygame.font.Font(join('font','Pixeltype.ttf'), 50)
-mini_title_font = pygame.font.Font(join('font','Pixeltype.ttf'), 70)
-title_font = pygame.font.Font(join('font','Pixeltype.ttf'), 90)
-nickname_font = pygame.font.Font(join('font','Pixeltype.ttf'), 130)
-menu_score_font = pygame.font.Font(join('font','Pixeltype.ttf'), 60)
-progress_font = pygame.font.Font(join('font', 'Pixeltype.ttf'), 35)
+score_font = pygame.font.Font(resource_path('font','Pixeltype.ttf'), 40)
+score_font_2 = pygame.font.Font(resource_path('font','Pixeltype.ttf'), 50)
+mini_title_font = pygame.font.Font(resource_path('font','Pixeltype.ttf'), 70)
+title_font = pygame.font.Font(resource_path('font','Pixeltype.ttf'), 90)
+nickname_font = pygame.font.Font(resource_path('font','Pixeltype.ttf'), 130)
+menu_score_font = pygame.font.Font(resource_path('font','Pixeltype.ttf'), 60)
+progress_font = pygame.font.Font(resource_path('font', 'Pixeltype.ttf'), 35)
 
 # menu
 game_titles = ['Basket Eco', 'Pioggia di Rifiuti!', 'Infestazione di \n            Rifiuti', 'Giustizia Eco', 'Quiz Eco']

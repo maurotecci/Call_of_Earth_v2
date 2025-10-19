@@ -76,7 +76,7 @@ class Shop:
         
     def import_data(self):
         try:
-            with open(join('saves', 'shop_data.txt')) as shop_file:
+            with open(save_path('shop_data.txt')) as shop_file:
                 self.shop_data = load(shop_file)
         except:
             self.shop_data = {
@@ -93,7 +93,7 @@ class Shop:
             }
             
     def save_shop_data(self):
-        with open(join('saves', 'shop_data.txt'), 'w') as shop_file:
+        with open(save_path('shop_data.txt'), 'w') as shop_file:
             dump(self.shop_data, shop_file)
                
     def event_loop(self):
