@@ -62,7 +62,7 @@ achv_keys = ['baskets_made', 'hit_streak', 'trash_collected', 'victories', 'corr
 achv_tresholds = {'baskets_made': [0, 30, 50], 'hit_streak': [0, 15, 20], 'trash_collected': [0, 75, 100], 'victories': [0, 2, 3], 'correct_answers': [0, 10, 20]}
 
 # shop
-skin_names = ['Julius', 'Kobe Bryant', 'Lebron James', 'Micheal Jordan', 'green car', 'red car', 'black car', 'blue car']
+skin_names = ['Julius', 'Kobe Bryant', 'Lebron James', 'Michael Jordan', 'green car', 'red car', 'black car', 'blue car']
 index_skin_conversion = {0: 'julius', 1: 'jordan', 2: 'kobe', 3: 'lebron'}
 prices = [750, 750, 750, 350, 350, 350]
 
