@@ -11,43 +11,34 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/last%20commit-today-brightgreen?style=flat-square" 
-       alt="Last Commit">
-  <img src="https://img.shields.io/badge/python-100%25-blue?style=flat-square" 
-       alt="Python Coverage">
+  <img src="https://img.shields.io/github/v/release/maurotecci/Call_of_Earth_v2" 
+       alt="Version">
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square" 
+       alt="Python Badge">
   <img src="https://img.shields.io/badge/platform-Windows-blue?style=flat-square" 
        alt="Languages">
 </p>
 
-<p align="center">
-  <em>Built with the tools and technologies:</em>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Markdown-000000?logo=markdown&logoColor=white&style=flat-square" 
-       alt="Markdown Badge">
-  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square" 
-       alt="Python Badge">
-</p>
-
 ## 📚 Table of Contents
 
-- [Overview](#🧩-overview)
+- [Overview](#-overview)
   
-- [Getting Started](🚀-getting-started)
+- [Getting Started](#-getting-started)
   
-- [Gameplay](#🎮-gameplay)
+- [Gameplay](#-gameplay)
   
-- [Credits](#💡-credits)
+- [Credits](#-credits)
+<br>
+<br>
 
 ## 🧩 Overview
 
-Call_of_Earth_v2 is a versatile, modular game framework built with Pygame, designed to deliver engaging eco-themed mini-games and educational content.
+Call_of_Earth_v2 is a versatile game built with Pygame, designed to deliver engaging eco-themed mini-games and educational content.
 Its architecture emphasizes maintainability and seamless integration of multimedia assets.
 
 ### Why Call_of_Earth_v2?
 
-This project aims to create an interactive platform that promotes environmental awareness through gamification.
+This is a school project that aims to create an interactive platform that promotes environmental awareness through a videogame.
 
 Core features include:
 
@@ -60,6 +51,8 @@ Core features include:
 - 🛠️ UI & Interaction: Includes menus, achievements, shop, and stats for a comprehensive user experience.
 
 - 🔁 Centralized Control: Manages game flow, stage transitions, and persistent data.
+<br>
+<br>
 
 ## 🚀 Getting Started
 ### 🧩 Prerequisites
@@ -69,7 +62,7 @@ The project requires the following dependecies:
   
 - **Package manager:** pip
   
-## ⚙️ Installation
+### ⚙️ Installation
 1. **Clone the repository:**
 <pre> > git clone https://github.com/maurotecci/Call_of_Earth_v2 </pre>
 
@@ -79,4 +72,24 @@ The project requires the following dependecies:
 3. **Install the dependencies:**
 <pre> > pip install -r requirements.txt </pre>
 
+4. **In the src directory start main.py:**
+<pre> > python main.py </pre>
+<br>
+<br>
+
 # 🎮 Gameplay   
+<p><em>Main menu: handling which game is chosen</em></p>
+
+![Game menu](images/screenshots/game_menu.png) 
+
+<p><em>Basketball inspired minigame where the objective is to throw the trash in the right bin</em></p>
+
+![Game Example](images/screenshots/minigame_example.png)
+<br>
+<br>
+
+## 🙌 Credits
+Developed by Mauro Tecci — 2024  
+Built using Python & Pygame.
+
+[Return ⬆️](#-call_of_earth_v2)
