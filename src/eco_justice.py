@@ -6,7 +6,7 @@ from objects import Obstacle, Road
 class EcoJustice(Minigame):
     def __init__(self, assets: dict, audio_files: dict, change_stage: callable, save_data: callable, saved_data: dict):
         super().__init__(assets, audio_files, change_stage, self.reset_local_vars, save_data, saved_data, 'minigame_4')
-        self.title = 'Elimina il nemico'
+        self.title = 'Eliminate the enemy!'
         
         game_surf = pygame.surface.Surface((800, 400))
         game_surf.fill(DARK_GRAY)

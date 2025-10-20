@@ -29,7 +29,7 @@ class Button:
         # text
         self.text_surf = score_font.render(text, False, BLACK)
         self.text_rect = self.text_surf.get_frect()
-        self.score_surf = score_font.render(f'Punteggio: {score}', True, BLACK)
+        self.score_surf = score_font.render(f'Best score: {score}', True, BLACK)
         self.score_rect = self.score_surf.get_frect()
         
         if '\n' in self.text:
@@ -42,7 +42,7 @@ class Button:
         
         if self.score != None:
             pygame.draw.rect(self.screen, self.outline_color, self.bottom_rect, width=3, border_radius=12)
-            self.score_surf = score_font.render(f'Punteggio: {self.score}', True, BLACK)
+            self.score_surf = score_font.render(f'Best score: {self.score}', True, BLACK)
             self.text_rect.center = (self.top_rect.centerx, self.top_rect.top + 30 * self.text_lines)
             self.score_rect.center = (self.top_rect.centerx, self.top_rect.top + 80)
         else:

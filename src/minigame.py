@@ -22,6 +22,8 @@ class Minigame:
         self.save_data = save_data
         self.score_eq = 0
         self.songs = [0, 1, 2, 3]
+        self.game_finished = False
+        self.space_pressed_before = False 
         
         # graphics
         self.assets = assets
@@ -64,7 +66,7 @@ class Minigame:
         self.strikes_surfs.clear()
         
         if self.rect_surfs:
-            self.rect_surfs[0] = (self.score_bg, score_font_2.render(f'Punteggio: {self.score}', False, (0, 0, 0)), self.score_rect)
+            self.rect_surfs[0] = (self.score_bg, score_font_2.render(f'Score: {self.score}', False, (0, 0, 0)), self.score_rect)
             self.score_rect = self.rect_surfs[0][1].get_frect(topleft=(425, 50))
             self.score_bg.width = self.score_rect.width + 25
             
@@ -90,6 +92,7 @@ class Minigame:
             self.saved_data['time_played'] += self.passed_time
             self.has_started = False
             self.game_timer = None
+            self.game_finished = True
             
     def check_bad_collision(self):
         if pygame.sprite.spritecollide(self.player, self.bad_trash, True):
@@ -112,7 +115,7 @@ class Minigame:
         if pygame.sprite.spritecollide(self.player, self.good_trash, True):
             self.score += 1
             self.audio_files['score'][0].play()
-            self.rect_surfs[0] = (self.score_bg, score_font_2.render(f'Punteggio: {self.score}', False, (0, 0, 0)), self.score_rect)
+            self.rect_surfs[0] = (self.score_bg, score_font_2.render(f'Score: {self.score}', False, (0, 0, 0)), self.score_rect)
             self.score_rect = self.rect_surfs[0][1].get_frect(topleft=(425, 50))
             self.score_bg.width = self.score_rect.width + 25
             
@@ -123,15 +126,21 @@ class Minigame:
         mouse_pos = pygame.mouse.get_pos()
         keys = pygame.key.get_pressed()
         curr_time_press = float((pygame.time.get_ticks() - self.press_timer) / 1000) if self.press_timer else 1 
+        space_pressed_now = keys[pygame.K_SPACE]
         
-        if keys[pygame.K_SPACE]:
+        if keys[pygame.K_SPACE] and not self.game_finished:
             self.song = choice(self.songs)
             self.audio_files['background'][self.song].play(loops=-1)
             self.has_started = True
             self.game_timer = pygame.time.get_ticks()
             self.reset_global_vars()
             
-        if pygame.mouse.get_pressed()[0] and curr_time_press >= 0.1:
+        if self.space_pressed_before and not space_pressed_now:
+            self.game_finished = False
+            
+        self.space_pressed_before = space_pressed_now
+            
+        if pygame.mouse.get_pressed()[0] and curr_time_press >= WAIT_TIME:
             if exit_rect.collidepoint(mouse_pos):
                 if not self.checking_rules: 
                     for group in self.groups:
@@ -156,7 +165,7 @@ class Minigame:
         exit_surf = self.cross
         exit_rect = exit_surf.get_frect(center=(750, 50))
         
-        instruction_surf = score_font.render('Premi spazio per iniziare!', False, (0, 0, 0))
+        instruction_surf = score_font.render('Press space to start!', False, (0, 0, 0))
         instruction_rect = instruction_surf.get_frect(center=(400, 500))
         
         self.display_surface.blit(title_surf, title_rect)
@@ -164,7 +173,7 @@ class Minigame:
         self.display_surface.blit(instruction_surf, instruction_rect)
         
         if self.score > 0:
-            score_text = menu_score_font.render(f'Punteggio: {self.score}', False, (0, 0, 0))
+            score_text = menu_score_font.render(f'Score: {self.score}', False, (0, 0, 0))
             score_rect = score_text.get_frect(center=(400, 100))
             self.display_surface.blit(score_text, score_rect)
             

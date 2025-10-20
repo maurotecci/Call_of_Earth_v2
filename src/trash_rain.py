@@ -7,7 +7,7 @@ class TrashRain(Minigame):
     def __init__(self, assets: dict, audio_files: dict, change_stage: callable, save_data: callable, saved_data: dict):
         super().__init__(assets, audio_files, change_stage, self.reset_local_vars, save_data, saved_data, 'minigame_3')
         self.display_surface = pygame.display.get_surface()
-        self.title = 'Elimina la spazzatura!'
+        self.title = 'Eliminate the trash!'
         
         self.skin = saved_data['skin']
         self.player = AnimatedPlayer(self.all_sprites, (400, 440), assets['player'][self.skin])

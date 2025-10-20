@@ -9,7 +9,7 @@ class Introduction:
         self.surfs = []
         self.audio_files['menu'][0].play(loops=-1)
         
-        title = title_font.render("Qual e' il tuo nickname?", False, BLACK)
+        title = title_font.render("What\'s your name?", False, BLACK)
         title_rect =  title.get_frect(center=(400,150))
         self.surfs = [(title, title_rect), (None, None), (None, None)]
         
@@ -39,7 +39,7 @@ class Introduction:
         user_rect = user_text.get_frect(topleft=(self.input_rect.x + 10, self.input_rect.y + 15))
         self.cursor_x = user_rect.right + 10
         
-        max_char_text = score_font.render(f'Caratteri utilizzati: {len(self.saved_data['name'])}', False, BLACK)
+        max_char_text = score_font.render(f'Used characters: {len(self.saved_data['name'])}', False, BLACK)
         max_char_rect = max_char_text.get_frect(center=(400, 500))
         
         self.surfs[1] = (user_text, user_rect)

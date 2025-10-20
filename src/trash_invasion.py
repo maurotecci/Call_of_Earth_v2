@@ -7,7 +7,7 @@ class TrashInvasion(Minigame):
     def __init__(self, assets: dict, audio_files: dict, change_stage: callable, save_data: callable, saved_data: dict):
         super().__init__(assets, audio_files, change_stage, self.reset_local_vars, save_data, saved_data, 'minigame_2')
         self.player = Player(self.all_sprites, (400, 525), assets['garbage_bag'])
-        self.title = 'Elimina la spazzatura!'
+        self.title = 'Eliminate the trash!'
         
         # game vars
         self.speed = 500
@@ -22,7 +22,6 @@ class TrashInvasion(Minigame):
         
         self.game_assets = [(screen_shrink, (650, 0)), (background, (150, 0)), 
                             (player_path, (150, 525))]
-        self.assets = assets
         
         # timers
         self.obstacle_timer = pygame.USEREVENT + 1
@@ -56,7 +55,7 @@ class TrashInvasion(Minigame):
             self.counter += 1
             self.audio_files['score'][1].play()
             self.saved_data['trash_eliminated'] += 1
-            self.rect_surfs[0] = (self.score_bg, score_font_2.render(f'Punteggio: {self.score}', False, BLACK), self.score_rect)
+            self.rect_surfs[0] = (self.score_bg, score_font_2.render(f'Score: {self.score}', False, BLACK), self.score_rect)
             self.score_rect = self.rect_surfs[0][1].get_frect(topleft=(425, 50))
             self.score_bg.width = self.score_rect.width + 25
             

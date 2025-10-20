@@ -7,7 +7,7 @@ from objects import Obstacle, Trash
 class EcoBasket(Minigame):
     def __init__(self, assets: dict, audio_files: dict, change_stage: callable, save_data: callable, saved_data: dict):
         super().__init__(assets, audio_files, change_stage, self.reset_local_vars, save_data, saved_data, 'minigame_1')
-        self.title = "Fai piu' canestri che puoi!"
+        self.title = "Score baskets!!"
         self.skin = saved_data['skin']
         self.player = BasketPlayer(self.all_sprites, (120, 450), audio_files, assets['player'][self.skin])
         self.old_score = self.score
@@ -30,7 +30,6 @@ class EcoBasket(Minigame):
         self.rect_surfs.append((self.timer_bg_rect, self.timer_surf, self.timer_rect))
                 
         # graphics
-        self.assets = assets
         self.trash_map = self.assets['level_icons'][2]
         self.map_rect = self.trash_map.get_frect(topleft=(20, 25))
         self.game_assets.clear()
@@ -40,7 +39,7 @@ class EcoBasket(Minigame):
         self.rules_rect = pygame.FRect((100,50), (600,500))
         self.tint_surf = pygame.surface.Surface((WINDOW_WIDTH, WINDOW_HEIGHT))
         self.tint_surf.set_alpha(200)
-        info_title = mini_title_font.render('Cestini', False, BLACK)
+        info_title = mini_title_font.render('Baskets', False, BLACK)
         info_title_rect = info_title.get_frect(center=(400, 100))
         self.info_surfs = [(self.trash_map, self.map_rect), (info_title, info_title_rect)]
         
@@ -108,7 +107,7 @@ class EcoBasket(Minigame):
                     self.audio_files['score'][1].play()
                     self.score_eq = self.score
                     self.saved_data['baskets_made'] += self.score
-                    self.rect_surfs[0] = (self.score_bg, score_font_2.render(f'Punteggio: {self.score}', False, BLACK), self.score_rect)
+                    self.rect_surfs[0] = (self.score_bg, score_font_2.render(f'Score: {self.score}', False, BLACK), self.score_rect)
                     self.score_rect = self.rect_surfs[0][1].get_frect(topleft=(425, 50))
                     self.score_bg.width = self.score_rect.width + 25
                 

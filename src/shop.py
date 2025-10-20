@@ -22,16 +22,16 @@ class Shop:
         self.player_rects, self.skin_surfs, self.names_surfs = [], [], []     
         self.other_surfs = []
         self.buttons, self.buy_buttons = [], {}
-        self.title = title_font.render('Negozio', False, BLACK)
-        self.other_surfs.append((self.title, (300, 40)))
+        self.title = title_font.render('Shop', False, BLACK)
+        self.other_surfs.append((self.title, (350, 40)))
         
         # graphics
         self.tint_surf = pygame.surface.Surface((WINDOW_WIDTH, WINDOW_HEIGHT))
         self.tint_surf.set_alpha(180)
-        self.buttons.append(Button('Si', 225, 100, (150, 220), 6))
+        self.buttons.append(Button('Yes', 225, 100, (150, 220), 6))
         self.buttons.append(Button('No', 225, 100, (425, 220), 6))
-        self.confirm_text = title_font.render('Confermi?', False, BLACK)
-        self.not_enough_text = menu_score_font.render('Non hai abbastanza monete!', False, BLACK)
+        self.confirm_text = title_font.render('Confirm?', False, BLACK)
+        self.not_enough_text = menu_score_font.render('You don\'t have enough coins!', False, BLACK)
         
         exit_surf = assets['level_icons'][0]
         self.exit_rect = exit_surf.get_frect(center=(750, 60))
@@ -128,7 +128,7 @@ class Shop:
         mouse_pos = pygame.mouse.get_pos()
         curr_time_press = float((pygame.time.get_ticks() - self.press_timer) / 1000) if self.press_timer else 1 
         
-        if pygame.mouse.get_pressed()[0] and curr_time_press >= 0.1:
+        if pygame.mouse.get_pressed()[0] and curr_time_press >= WAIT_TIME:
             self.press_timer = pygame.time.get_ticks()
             if self.confirming:
                 self.mouse_pressed()
@@ -159,11 +159,11 @@ class Shop:
         
         bg_rect = pygame.FRect((100, 100), (600, 320))
         pygame.draw.rect(self.display_surface, LIGHT_BLUE, bg_rect, border_radius=12)
-        self.display_surface.blit(self.confirm_text, (270, 120))
+        self.display_surface.blit(self.confirm_text, (275, 120))
         
-        if self.not_enough: self.display_surface.blit(self.not_enough_text, (150, 350))
+        if self.not_enough: self.display_surface.blit(self.not_enough_text, (130, 350))
         else: 
-            skin_cost = menu_score_font.render(f'Costo: {prices[curr_skin]}', False, BLACK)
+            skin_cost = menu_score_font.render(f'Cost: {prices[curr_skin]}', False, BLACK)
             self.display_surface.blit(skin_cost, (300, 350))
         
         for button in self.buttons:
@@ -191,8 +191,8 @@ class Shop:
                 self.display_surface.blit(lock_graphic, (self.player_rects[index].left + offset, self.player_rects[index].top))
                 
                 pygame.draw.rect(self.display_surface, GRAY, self.buy_buttons[str(index)], border_radius=12)
-                buy_text = score_font.render('Compra', False, BLACK)
-                offset = 25 if index < 4 else 7
+                buy_text = score_font.render('Buy', False, BLACK)
+                offset = 45 if index < 4 else 25
                 self.display_surface.blit(buy_text, (self.buy_buttons[str(index)].left + offset, self.buy_buttons[str(index)].top + 5))
                 
         pygame.draw.line(self.display_surface, WHITE, (0, 390), (WINDOW_WIDTH, 390), 5)

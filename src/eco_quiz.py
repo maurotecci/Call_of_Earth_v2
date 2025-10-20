@@ -5,7 +5,7 @@ from minigame import Minigame
 class Quiz(Minigame):
     def __init__(self, assets: dict, audio_files: dict, change_stage: callable, save_data: callable, saved_data: dict):
         super().__init__(assets, audio_files, change_stage, self.reset_local_vars, save_data, saved_data, 'minigame_5')
-        self.title = 'Quante ne sai?'
+        self.title = 'How smart are you?'
         
         # game vars
         self.curr_question = 0
@@ -55,7 +55,7 @@ class Quiz(Minigame):
         mouse_pos = pygame.mouse.get_pos()
         curr_time_press = float((pygame.time.get_ticks() - self.press_timer) / 1000) if self.press_timer else 1 
             
-        if pygame.mouse.get_pressed()[0] and curr_time_press >= 0.1:
+        if pygame.mouse.get_pressed()[0] and curr_time_press >= WAIT_TIME:
             self.press_timer = pygame.time.get_ticks()
             for button in self.buttons:
                 if button.check_click():

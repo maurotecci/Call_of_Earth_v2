@@ -33,10 +33,10 @@ class Achievements:
         self.exit_surf = assets['level_icons'][0]
         self.exit_rect = self.exit_surf.get_frect(center=(750, 50))
         
-        title = title_font.render('Obietivi', False, BLACK)
+        title = title_font.render('Objectives', False, BLACK)
         title_rect = title.get_frect(center=(400, 50))
         
-        self.goal_title = title_font.render('Obiettivi', False, BLACK)
+        self.goal_title = title_font.render('Objectives', False, BLACK)
         self.goal_rect = self.goal_title.get_frect(center=(400, 100))
         self.tint_surf = pygame.surface.Surface((WINDOW_WIDTH, WINDOW_HEIGHT))
         self.tint_surf.set_alpha(180)
@@ -63,7 +63,7 @@ class Achievements:
             self.surfs.append((self.achv_surfs[i], (20, 120 + bg_achv_divided * i)))
             self.surfs.append((self.progress_surfs[i], (20, 170 + bg_achv_divided * i)))
             
-            button = Button(f'Ricompensa: {game_reward[i]}', 200, 80, (550, 115 + (i * 100)), 5)
+            button = Button(f'Reward: {game_reward[i]}', 200, 80, (550, 115 + (i * 100)), 5)
             self.buttons.append(button)
             
     def event_loop(self):
@@ -121,7 +121,7 @@ class Achievements:
         mouse_pos = pygame.mouse.get_pos()
         curr_time_press = float((pygame.time.get_ticks() - self.press_timer) / 1000) if self.press_timer else 1 
         
-        if pygame.mouse.get_pressed()[0] and curr_time_press >= 0.1:
+        if pygame.mouse.get_pressed()[0] and curr_time_press >= WAIT_TIME:
             self.press_timer = pygame.time.get_ticks()
             if self.exit_rect.collidepoint(mouse_pos):
                 if self.checking_objectives: self.checking_objectives = False
