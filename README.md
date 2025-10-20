@@ -72,8 +72,8 @@ The project requires the following dependecies:
 3. **Install the dependencies:**
 <pre> > pip install -r requirements.txt </pre>
 
-4. **In the src directory start main.py:**
-<pre> > python main.py </pre>
+4. **Start main.py:**
+<pre> > python src/main.py </pre>
 <br>
 <br>
 
@@ -84,7 +84,7 @@ The project requires the following dependecies:
 
 <p><em>Basketball inspired minigame where the objective is to throw the trash in the right bin</em></p>
 
-![Game Example](images/screenshots/minigame_example.png)
+![Game Example](images/screenshots/game_demo.gif)
 <br>
 <br>
 
@@ -93,3 +93,4 @@ Developed by Mauro Tecci — 2024
 Built using Python & Pygame.
 
 [Return ⬆️](#-call_of_earth_v2)
+
