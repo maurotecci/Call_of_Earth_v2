@@ -76,7 +76,7 @@ class Achievements:
                 
     def import_achv_data(self):
         try:
-            with open(save_path('achievements_data.txt')) as redeem_file:
+            with open(os.path.join("saves", "achievements_data.txt")) as redeem_file:
                 self.redeemed_rewards = load(redeem_file)
         except:
             self.redeemed_rewards = {
@@ -88,7 +88,7 @@ class Achievements:
             }
             
     def save_achv_data(self):
-        with open(save_path('achievements_data.txt'), 'w') as redeem_file:
+        with open(os.path.join("saves", "achievements_data.txt"), 'w') as redeem_file:
             dump(self.redeemed_rewards, redeem_file)
                 
     def draw(self):

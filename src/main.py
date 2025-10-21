@@ -37,7 +37,7 @@ class Game:
     
     def import_data(self):
         try:
-            with open(save_path('games_data.txt')) as save_file:
+            with open(os.path.join('saves', 'games_data.txt')) as save_file:
                 self.saved_data = load(save_file)
         except:
             self.saved_data = {
@@ -62,37 +62,37 @@ class Game:
         }  
         
     def save_data(self):
-        with open(save_path('games_data.txt'), 'w') as save_file:
+        with open(os.path.join('saves', 'games_data.txt'), 'w') as save_file:
             dump(self.saved_data, save_file)
     
     def import_assets(self):
         self.assets = {
-            'sky': import_image(resource_path('images', 'livello', 'background', 'sky')),
-            'ground': import_image(resource_path('images', 'livello', 'background', 'ground')),
-            'level_icons': import_folder(resource_path('images', 'livello', 'icone')),
-            'menu_icons': import_folder(resource_path('images', 'menu', 'icone')),
-            'player': import_sub_folders(resource_path('images', 'livello', 'player', 'omini')),
-            'cars': import_folder(resource_path('images', 'livello', 'player', 'macchine')),
-            'garbage_bag': import_image(resource_path('images', 'livello', 'player', 'cestini', '0')),
-            'background': import_image(resource_path('images', 'menu', 'background')),
-            'title': import_image(resource_path('images', 'menu', 'titolo_menu')),
-            'good_trash': import_folder(resource_path('images', 'livello', 'rifiuti', 'buoni')),
-            'bad_trash': import_folder(resource_path('images', 'livello', 'rifiuti', 'cattivi')),
-            'super_trash': import_image(resource_path('images', 'livello', 'rifiuti', 'super', '0')),
-            'trash_can': import_image(resource_path('images', 'livello', 'player', 'cestino')),
-            'trash_cans': import_folder(resource_path('images', 'livello', 'cestini')),
-            'stone': import_image(resource_path('images', 'livello', 'ostacoli', '0')),
+            'sky': import_image(os.path.join('images', 'livello', 'background', 'sky')),
+            'ground': import_image(os.path.join('images', 'livello', 'background', 'ground')),
+            'level_icons': import_folder(os.path.join('images', 'livello', 'icone')),
+            'menu_icons': import_folder(os.path.join('images', 'menu', 'icone')),
+            'player': import_sub_folders(os.path.join('images', 'livello', 'player', 'omini')),
+            'cars': import_folder(os.path.join('images', 'livello', 'player', 'macchine')),
+            'garbage_bag': import_image(os.path.join('images', 'livello', 'player', 'cestini', '0')),
+            'background': import_image(os.path.join('images', 'menu', 'background')),
+            'title': import_image(os.path.join('images', 'menu', 'titolo_menu')),
+            'good_trash': import_folder(os.path.join('images', 'livello', 'rifiuti', 'buoni')),
+            'bad_trash': import_folder(os.path.join('images', 'livello', 'rifiuti', 'cattivi')),
+            'super_trash': import_image(os.path.join('images', 'livello', 'rifiuti', 'super', '0')),
+            'trash_can': import_image(os.path.join('images', 'livello', 'player', 'cestino')),
+            'trash_cans': import_folder(os.path.join('images', 'livello', 'cestini')),
+            'stone': import_image(os.path.join('images', 'livello', 'ostacoli', '0')),
         }
         
         self.assets['sky'] = pygame.transform.rotozoom(self.assets['sky'], 0, 1.3)
         
         self.audio_files = {
-            'completion': import_audio_folder(resource_path('audio', 'completamento')),
-            'shop': import_audio_folder(resource_path('audio', 'negozio')),
-            'player': import_audio_folder(resource_path('audio', 'player')),
-            'score': import_audio_folder(resource_path('audio', 'punteggio')),
-            'background': import_audio_folder(resource_path('audio', 'sottofondo')),
-            'menu': import_audio_folder(resource_path('audio', 'menu'))
+            'completion': import_audio_folder(os.path.join('audio', 'completamento')),
+            'shop': import_audio_folder(os.path.join('audio', 'negozio')),
+            'player': import_audio_folder(os.path.join('audio', 'player')),
+            'score': import_audio_folder(os.path.join('audio', 'punteggio')),
+            'background': import_audio_folder(os.path.join('audio', 'sottofondo')),
+            'menu': import_audio_folder(os.path.join('audio', 'menu'))
         }
         
         self.audio_files['score'][5].set_volume(0.2)
