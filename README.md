@@ -1,7 +1,7 @@
 <h1 align="center">🌍 CALL_OF_EARTH_V2</h1>
 
 <p align="center">
-  <em>Fun videogame to explore the world of recycling</em>
+  <em>Fun videogame to explore the world of recycling.</em>
 </p>
 
 <p align="center">
@@ -23,7 +23,9 @@
 
 - [Overview](#-overview)
   
-- [Getting Started](#-getting-started)
+- [Source Code Installation](#️-source-code-installation)
+  
+- [Executable Installation](#-executable-installation)
   
 - [Gameplay](#-gameplay)
   
@@ -54,15 +56,14 @@ Core features include:
 <br>
 <br>
 
-## 🚀 Getting Started
-### 🧩 Prerequisites
+## ⚙️ Source Code Installation
+### 🧩 Prerequisites 
 The project requires the following dependecies:
 
-- **Programming language:** Python
+- **Programming language:** Python.
   
-- **Package manager:** pip
-  
-### ⚙️ Installation
+- **Package manager:** pip.
+### 📖 Steps
 1. **Clone the repository:**
 <pre> > git clone https://github.com/maurotecci/Call_of_Earth_v2 </pre>
 
@@ -77,12 +78,20 @@ The project requires the following dependecies:
 <br>
 <br>
 
+## 💾 Executable Installation
+1. **Go to the [Releases](../../releases) section** of this repository.  
+2. **Download** the latest version of `CallOfEarth.exe`.
+3. **Unpack** the zip file.
+4. **Double-click** the file to start the game. 
+<br>
+<br>
+
 # 🎮 Gameplay   
-<p><em>Main menu: handling which game is chosen</em></p>
+<p><em>Main menu: handling which game is chosen.</em></p>
 
 ![Game menu](images/screenshots/game_menu.png) 
 
-<p><em>Basketball inspired minigame where the objective is to throw the trash in the right bin</em></p>
+<p><em>Basketball inspired minigame where the objective is to throw the trash in the right bin.</em></p>
 
 ![Game Example](images/screenshots/game_demo.gif)
 <br>
@@ -93,4 +102,3 @@ Developed by Mauro Tecci — 2024
 Built using Python & Pygame.
 
 [Return ⬆️](#-call_of_earth_v2)
-
