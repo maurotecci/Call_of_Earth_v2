@@ -1,4 +1,4 @@
-<h1 align="center">🌍 CALL_OF_EARTH_V2</h1>
+<h1 align="center">🌍 CALL OF EARTH</h1>
 
 <p align="center">
   <em>Fun videogame to explore the world of recycling.</em>
@@ -25,7 +25,9 @@
   
 - [Source Code Installation](#️-source-code-installation)
   
-- [Executable Installation](#-executable-installation)
+- [Game Download](#-game-download)
+
+- [Controls](#-controls)
   
 - [Gameplay](#-gameplay)
   
@@ -35,10 +37,10 @@
 
 ## 🧩 Overview
 
-Call_of_Earth_v2 is a versatile game built with Pygame, designed to deliver engaging eco-themed mini-games and educational content.
+Call of Earth is a versatile game built with Pygame, designed to deliver engaging eco-themed mini-games and educational content.
 Its architecture emphasizes maintainability and seamless integration of multimedia assets.
 
-### Why Call_of_Earth_v2?
+### Why Call of Earth?
 
 This is a school project that aims to create an interactive platform that promotes environmental awareness through a videogame.
 
@@ -78,7 +80,7 @@ The project requires the following dependecies:
 <br>
 <br>
 
-## 💾 Executable Installation
+## 💾 Game Download
 1. **Go to the [Releases](../../releases) section** of this repository.
 2. **Read** the README.md file for more informations.
 3. **Download** the latest version of `CallOfEarth.exe`.
@@ -87,7 +89,20 @@ The project requires the following dependecies:
 <br>
 <br>
 
-# 🎮 Gameplay   
+## 🎮 Controls
+Master the controls to enjoy every minigame experience!
+
+| Action                     | Key                         |
+|:--------------------------:|:---------------------------:|
+| **Start a game / Aim**     | Press / hold **Spacebar**   |
+| **Shoot / Move Up**        | ⬆️ **Arrow Up**             |
+| **Move Down**              | ⬇️ **Arrow Down**           |
+| **Move Left**              | ⬅️ **Arrow Left** or **A**  |
+| **Move Right**             | ➡️ **Arrow Right** or **D** |
+<br>
+<br>
+
+## 🎮 Gameplay   
 <p><em>Main menu: handling which game is chosen.</em></p>
 
 ![Game menu](images/screenshots/game_menu.png) 
@@ -103,4 +118,5 @@ Developed by Mauro Tecci — 2024
 Built using Python & Pygame.
 
 [Return ⬆️](#-call_of_earth_v2)
+
 
