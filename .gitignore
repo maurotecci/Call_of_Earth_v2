@@ -1,4 +1,6 @@
 saves/*.txt
+!saves/.gitkeep
+
 __pycache__/
 *.pyc
 *.pyo
