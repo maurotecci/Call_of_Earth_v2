@@ -59,7 +59,7 @@ achievements_titles = ['Basket Superstar ', 'Eagle Eye ', 'Crazy Collector ','Ex
 achv_progress = ['Baskets made: ', 'Trash destroyed: ', 'Trash collected: ', 'Victories: ', 'Correct answers: ']
 game_reward = ['175', '150', '150', '200', '150']
 achv_keys = ['baskets_made', 'hit_streak', 'trash_collected', 'victories', 'correct_answers']
-achv_tresholds = {'baskets_made': [0, 30, 50], 'hit_streak': [0, 15, 20], 'trash_collected': [0, 75, 100], 'victories': [0, 2, 3], 'correct_answers': [0, 10, 20]}
+achv_tresholds = {'baskets_made': 50, 'hit_streak': 20, 'trash_collected': 100, 'victories': 3, 'correct_answers': 20}
 
 # shop
 skin_names = ['Julius', 'Kobe Bryant', 'Lebron James', 'Michael Jordan', 'green car', 'red car', 'black car', 'blue car']

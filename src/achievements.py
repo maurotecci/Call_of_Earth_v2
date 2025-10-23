@@ -13,19 +13,7 @@ class Achievements:
         self.checking_objectives = False
         self.import_achv_data()
         self.audio_files['background'][5].play(loops=-1)
-        self.press_timer = None
-        
-        # get achv tresholds
-        self.curr_tresholds, self.curr_achv_level = [], []
-        for achv in achv_tresholds:
-            for index, treshold in enumerate(achv_tresholds[achv]):
-                if treshold >= self.saved_data[achv]:
-                    self.curr_tresholds.append(treshold)
-                    self.curr_achv_level.append(index + 1)
-                    break
-                if index == 2: 
-                    self.curr_achv_level.append(3)
-                    self.curr_tresholds.append(treshold)
+        self.press_timer = None    
         
         # create surfs
         info_surf = assets['level_icons'][2]
@@ -53,9 +41,9 @@ class Achievements:
         self.surfs = [(bg_achv_surf, bg_achv_rect), (title, title_rect), (info_surf, self.info_rect)]
         
         bg_achv_divided = bg_achv_rect.height / 5
-        for i in range(5):
-            achv_title_text = achievements_titles[i] + 'I ' * self.curr_achv_level[i]
-            achv_progress_text = achv_progress[i] + f'{self.saved_data[achv_keys[i]]} / {self.curr_tresholds[i]}'
+        for i, (achv, treshold) in enumerate(achv_tresholds.items()):            
+            achv_title_text = achievements_titles[i] 
+            achv_progress_text = achv_progress[i] + f'{self.saved_data[achv_keys[i]]} / {treshold}'
             
             self.achv_surfs.append(menu_score_font.render(achv_title_text, False, BLACK))
             self.progress_surfs.append(progress_font.render(achv_progress_text, False, BLACK))
@@ -63,8 +51,10 @@ class Achievements:
             self.surfs.append((self.achv_surfs[i], (20, 120 + bg_achv_divided * i)))
             self.surfs.append((self.progress_surfs[i], (20, 170 + bg_achv_divided * i)))
             
-            button = Button(f'Reward: {game_reward[i]}', 200, 80, (550, 115 + (i * 100)), 5)
-            self.buttons.append(button)
+            btn_text = f'Reward: {game_reward[i]}' if not self.redeemed_rewards[str(i)] else "Completed!"
+            button = Button(btn_text, 200, 80, (550, 115 + (i * 100)), 5, clickable=not self.redeemed_rewards[str(i)])
+            self.buttons.append(button)   
+               
             
     def event_loop(self):
         for event in pygame.event.get():
@@ -134,9 +124,11 @@ class Achievements:
             
             for index, button in enumerate(self.buttons):
                 if button.check_click():
-                    if self.saved_data[achv_keys[index]] >= achv_tresholds[achv_keys[index]][2]:
+                    if self.saved_data[achv_keys[index]] >= achv_tresholds[achv_keys[index]]:
                         if not self.redeemed_rewards[str(index)]:
                             self.redeemed_rewards[str(index)] = True
+                            button.text = "Completed!"
+                            button.clickable = False
                             self.saved_data['coins'] += int(game_reward[index])    
                             self.audio_files['completion'][0].play()        
     

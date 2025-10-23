@@ -2,7 +2,7 @@ from pygame import image as image
 from settings import *
 
 class Button:
-    def __init__(self, text: str, width: int, height: int, pos: tuple[int, int], elevation: int, score: int=None, type: int=None):
+    def __init__(self, text: str, width: int, height: int, pos: tuple[int, int], elevation: int, clickable: bool=True, score: int=None, type: int=None):
         # core attributes
         self.screen = pygame.display.get_surface()
         self.pressed = False
@@ -13,6 +13,7 @@ class Button:
         self.text_lines = 1
         self.score = score
         self.type = type
+        self.clickable = clickable
         
         # top rect
         self.top_rect = pygame.FRect(pos, (width, height))
@@ -62,7 +63,7 @@ class Button:
     def check_click(self):
         pressed = False
         mouse_pos = pygame.mouse.get_pos()
-        if self.top_rect.collidepoint(mouse_pos):
+        if self.top_rect.collidepoint(mouse_pos) and self.clickable:
             
             self.text_surf = score_font.render(self.text, False, '#FFFFFF')
             if self.score != None:

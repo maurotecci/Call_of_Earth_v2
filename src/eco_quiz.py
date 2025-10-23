@@ -65,7 +65,7 @@ class Quiz(Minigame):
                         self.score_eq = self.score * 3
                         if self.curr_question not in self.saved_data['already_answered']:
                             self.saved_data['already_answered'].append(self.curr_question)
-                            self.saved_data['correct_answers'] += len(self.saved_data['already_answered'])
+                            self.saved_data['correct_answers'] = len(self.saved_data['already_answered'])
                     else: self.audio_files['score'][5].play()
          
                     self.curr_index += 1

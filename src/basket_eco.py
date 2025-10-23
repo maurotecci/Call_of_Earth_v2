@@ -106,7 +106,7 @@ class EcoBasket(Minigame):
                     self.score += 1
                     self.audio_files['score'][1].play()
                     self.score_eq = self.score
-                    self.saved_data['baskets_made'] += self.score
+                    self.saved_data['baskets_made'] += 1
                     self.rect_surfs[0] = (self.score_bg, score_font_2.render(f'Score: {self.score}', False, BLACK), self.score_rect)
                     self.score_rect = self.rect_surfs[0][1].get_frect(topleft=(425, 50))
                     self.score_bg.width = self.score_rect.width + 25
