@@ -108,17 +108,12 @@ Master the controls to enjoy every minigame experience!
 
 ![Game Example](images/screenshots/game_demo.gif)
 
-<p><em>🗑️ Trash that needs to be collected/thrown:</em></p>
+| **Items textures**             | **Items type**                  |
+|:--------------------------:|:---------------------------:|
+| ![Paper](images/livello/rifiuti/cattivi/0.png) ![Cigarette](images/livello/rifiuti/cattivi/1.png) ![Plastic bottle](images/livello/rifiuti/cattivi/2.png) ![Banana peel](images/livello/rifiuti/cattivi/3.png) ![Glass bottle](images/livello/rifiuti/cattivi/4.png) | 🗑️ **Trash items** — collect them to earn points |
+| ![Water drop](images/livello/rifiuti/buoni/0.png)![Plant](images/livello/rifiuti/buoni/1.png)![Rock](images/livello/ostacoli/0.png) | ⚠️ **Bad items** — avoid them or you'll risk losing |
+| ![Mushroom](images/livello/rifiuti/super/0.png) | ⚡ **Boost item** - collect it to bring you closer to victory |
 
-![Paper](images/livello/rifiuti/cattivi/0.png)![Cigarette](images/livello/rifiuti/cattivi/1.png)![Plastic bottle](images/livello/rifiuti/cattivi/2.png)![Banana peel](images/livello/rifiuti/cattivi/3.png)![Glass bottle](images/livello/rifiuti/cattivi/4.png)
-
-<p><em>🚫 Items that need to be avoided:</em></p>
-
-![Water drop](images/livello/rifiuti/buoni/0.png)![Plant](images/livello/rifiuti/buoni/1.png)![Rock](images/livello/ostacoli/0.png)
-
-<p><em>⚡ Item that will boost you:</em></p>
-
-![Mushroom](images/livello/rifiuti/super/0.png)
 <br>
 <br>
 
@@ -127,4 +122,5 @@ Developed by Mauro Tecci — 2024
 Built using Python & Pygame.
 
 [Return ⬆️](#-call-of-earth)
+
 
