@@ -126,7 +126,4 @@ Master the controls to enjoy every minigame experience!
 Developed by Mauro Tecci — 2024  
 Built using Python & Pygame.
 
-[Return ⬆️](#-call_of_earth_v2)
-
-
-
+[Return ⬆️](#-call-of-earth)
