@@ -15,15 +15,13 @@
        alt="Version">
   <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square" 
        alt="Python Badge">
-  <img src="https://img.shields.io/badge/platform-Windows-blue?style=flat-square" 
-       alt="Languages">
 </p>
 
 ## 📚 Table of Contents
 
 - [Overview](#-overview)
   
-- [Source Code Installation](#️-source-code-installation)
+- [Source Code Download](#️-source-code-download)
   
 - [Game Download](#-game-download)
 
@@ -58,13 +56,12 @@ Core features include:
 <br>
 <br>
 
-## ⚙️ Source Code Installation
+## ⚙️ Source Code Download
 ### 🧩 Prerequisites 
 The project requires the following dependecies:
 
 - **Programming language:** Python.
   
-- **Package manager:** pip.
 ### 📖 Steps
 1. **Clone the repository:**
 <pre> > git clone https://github.com/maurotecci/Call_of_Earth_v2 </pre>
@@ -94,7 +91,7 @@ Master the controls to enjoy every minigame experience!
 
 | Action                     | Key                         |
 |:--------------------------:|:---------------------------:|
-| **Start a game / Aim**     | Press / hold **Spacebar**   |
+| **Aim**                    | Hold **Spacebar**           |
 | **Shoot / Move Up**        | ⬆️ **Arrow Up**             |
 | **Move Down**              | ⬇️ **Arrow Down**           |
 | **Move Left**              | ⬅️ **Arrow Left** or **A**  |
@@ -103,13 +100,25 @@ Master the controls to enjoy every minigame experience!
 <br>
 
 ## 🎮 Gameplay   
-<p><em>Main menu: handling which game is chosen.</em></p>
+<p><em>Main menu.</em></p>
 
 ![Game menu](images/screenshots/game_menu.png) 
 
-<p><em>Basketball inspired minigame where the objective is to throw the trash in the right bin.</em></p>
+<p><em>Basketball inspired minigame: throw the trash in the right bin to score points.</em></p>
 
 ![Game Example](images/screenshots/game_demo.gif)
+
+<p><em>Trash that needs to be collected/thrown:</em></p>
+
+![Paper](images/livello/rifiuti/cattivi/0.png)![Cigarette](images/livello/rifiuti/cattivi/1.png)![Plastic bottle](images/livello/rifiuti/cattivi/2.png)![Banana peel](images/livello/rifiuti/cattivi/3.png)![Glass bottle](images/livello/rifiuti/cattivi/4.png)
+
+<p><em>Items that need to be avoided:</em></p>
+
+![Water drop](images/livello/rifiuti/buoni/0.png)![Plant](images/livello/rifiuti/buoni/1.png)![Rock](images/livello/ostacoli/0.png)
+
+<p><em>Item that will boost you:</em></p>
+
+![Mushroom](images/livello/rifiuti/super/0.png)
 <br>
 <br>
 
@@ -118,5 +127,6 @@ Developed by Mauro Tecci — 2024
 Built using Python & Pygame.
 
 [Return ⬆️](#-call_of_earth_v2)
+
 
 
