@@ -100,15 +100,18 @@ Master the controls to enjoy every minigame experience!
 <br>
 
 ## 🎮 Gameplay   
-<p><em>Main menu.</em></p>
+### 🏠 Main menu
 
 ![Game menu](images/screenshots/game_menu.png) 
 
-<p><em>Basketball inspired minigame: throw the trash in the right bin to score points.</em></p>
+### 🏀 Basketball minigame
+<p><em>Throw the trash in the right bin to score points.</em></p>
 
 ![Game Example](images/screenshots/game_demo.gif)
 
-| **Items textures**             | **Items type**                  |
+### 🧰 Game items
+
+| **Textures**             | **Type**                  |
 |:--------------------------:|:---------------------------:|
 | ![Paper](images/livello/rifiuti/cattivi/0.png) ![Cigarette](images/livello/rifiuti/cattivi/1.png) ![Plastic bottle](images/livello/rifiuti/cattivi/2.png) ![Banana peel](images/livello/rifiuti/cattivi/3.png) ![Glass bottle](images/livello/rifiuti/cattivi/4.png) | 🗑️ **Trash items** — collect them to earn points |
 | ![Water drop](images/livello/rifiuti/buoni/0.png)![Plant](images/livello/rifiuti/buoni/1.png)![Rock](images/livello/ostacoli/0.png) | ⚠️ **Bad items** — avoid them or you'll risk losing |
@@ -122,5 +125,6 @@ Developed by Mauro Tecci — 2024
 Built using Python & Pygame.
 
 [Return ⬆️](#-call-of-earth)
+
 
 
