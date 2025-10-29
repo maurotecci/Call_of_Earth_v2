@@ -24,8 +24,6 @@
 - [Source Code Download](#️-source-code-download)
   
 - [Game Download](#-game-download)
-
-- [Controls](#-controls)
   
 - [Gameplay](#-gameplay)
   
@@ -86,8 +84,8 @@ The project requires the following dependecies:
 <br>
 <br>
 
-## 🎮 Controls
-Master the controls to enjoy every minigame experience!
+## 🎮 Gameplay
+### 🕹️ Controls
 
 | Action                     | Key                         |
 |:--------------------------:|:---------------------------:|
@@ -96,18 +94,6 @@ Master the controls to enjoy every minigame experience!
 | **Move Down**              | ⬇️ **Arrow Down**           |
 | **Move Left**              | ⬅️ **Arrow Left** or **A**  |
 | **Move Right**             | ➡️ **Arrow Right** or **D** |
-<br>
-<br>
-
-## 🎮 Gameplay   
-### 🏠 Main menu
-
-![Game menu](images/screenshots/game_menu.png) 
-
-### 🏀 Basketball minigame
-<p><em>Throw the trash in the right bin to score points.</em></p>
-
-![Game Example](images/screenshots/game_demo.gif)
 
 ### 🧰 Game items
 
@@ -117,6 +103,15 @@ Master the controls to enjoy every minigame experience!
 | ![Water drop](images/livello/rifiuti/buoni/0.png)![Plant](images/livello/rifiuti/buoni/1.png)![Rock](images/livello/ostacoli/0.png) | ⚠️ **Bad items** — avoid them or you'll risk losing |
 | ![Mushroom](images/livello/rifiuti/super/0.png) | ⚡ **Boost item** - collect it to bring you closer to victory |
 
+### 📸 Screenshots
+🏠 **Main menu**
+
+![Game menu](images/screenshots/game_menu.png) 
+
+🏀 **Basketball minigame**
+<p><em>Throw the trash in the right bin to score points.</em></p>
+
+![Game Example](images/screenshots/game_demo.gif)
 <br>
 <br>
 
@@ -125,6 +120,7 @@ Developed by Mauro Tecci — 2024
 Built using Python & Pygame.
 
 [Return ⬆️](#-call-of-earth)
+
 
 
 
