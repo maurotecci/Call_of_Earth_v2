@@ -77,10 +77,9 @@ The project requires the following dependecies:
 
 ## 💾 Game Download
 1. **Go to the [Releases](../../releases) section** of this repository.
-2. **Read** the README.md file for more informations.
-3. **Download** the latest version of `CallOfEarth.exe`.
-4. **Unpack** the zip file.
-5. **Double-click** the file to start the game. 
+2. **Download** the latest version of `CallOfEarth.exe`.
+3. **Unpack** the zip file.
+4. **Double-click** the file to start the game. 
 <br>
 <br>
 
@@ -120,6 +119,7 @@ Developed by Mauro Tecci — 2024
 Built using Python & Pygame.
 
 [Return ⬆️](#-call-of-earth)
+
 
 
 
