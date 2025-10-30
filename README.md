@@ -11,10 +11,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/v/release/maurotecci/Call_of_Earth_v2" 
-       alt="Version">
-  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=flat-square" 
-       alt="Python Badge">
+  <img src="https://img.shields.io/github/v/release/maurotecci/Call_of_Earth_v2" alt="Version">
+  <img src="https://img.shields.io/badge/Pygame-2.5.0-green.svg" alt="Pygame">
+  <img src="https://img.shields.io/badge/Type-School%20Project-blueviolet.svg" alt="Type">
 </p>
 
 ## 📚 Table of Contents
@@ -119,6 +118,7 @@ Developed by Mauro Tecci — 2024
 Built using Python & Pygame.
 
 [Return ⬆️](#-call-of-earth)
+
 
 
 
